@@ -1,41 +1,48 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import { useEffect, useRef, useState } from 'react';
+import { useDebounceCallback, useResizeObserver } from 'usehooks-ts';
 
-function App() {
-  const [count, setCount] = useState(0);
+import * as S from './App.styled';
+import generateParticles from './generateParticles';
+
+type Size = {
+  width?: number;
+  height?: number;
+};
+
+export default function App() {
+  const [{ width, height }, setSize] = useState<Size>({
+    width: undefined,
+    height: undefined,
+  });
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const canvasRef = useRef(null);
+
+  const onResize = useDebounceCallback(setSize, 200);
+
+  useResizeObserver({
+    ref: wrapperRef,
+    onResize,
+  });
+
+  useEffect(() => {
+    const { mouseMove, scrollCheck, resize } = generateParticles(
+      wrapperRef.current,
+      canvasRef.current,
+    );
+
+    return () => {
+      window.removeEventListener('mousemove', mouseMove);
+      window.removeEventListener('scroll', scrollCheck);
+      window.removeEventListener('resize', resize);
+    };
+  }, [width, height]);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button
-          type="button"
-          onClick={() => setCount((prevCount) => prevCount + 1)}
-        >
-          count is
-          {count}
-        </button>
-        <p>
-          Edit
-          <code>src/App.tsx</code>
-          and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <S.Wrapper ref={wrapperRef}>
+      <S.Canvas ref={canvasRef} />
+      <S.Container>
+        <h1>My portfolio</h1>
+      </S.Container>
+    </S.Wrapper>
   );
 }
-
-export default App;
