@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  position: relative;
+`;
 
 export const Container = styled.div``;
 
@@ -18,19 +20,16 @@ export const Header = styled.header`
   padding-right: 20px;
 
   @media screen and (min-width: 768px) {
-    /* max-width: 768px; */
     padding-left: 30px;
     padding-right: 30px;
   }
 
   @media screen and (min-width: 1024px) {
-    /* max-width: 1024px; */
     padding-left: 40px;
     padding-right: 40px;
   }
 
   @media screen and (min-width: 1440px) {
-    /* max-width: 1440px; */
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -83,4 +82,18 @@ export const MenuButton = styled.button`
     width: 100%;
     height: 100%;
   }
+`;
+
+export const SocialsBlock = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 40px;
+  color: white;
+`;
+
+export const EmailBlock = styled.div`
+  position: fixed;
+  bottom: 0;
+  right: 40px;
+  color: white;
 `;

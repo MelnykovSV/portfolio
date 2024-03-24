@@ -2,7 +2,8 @@ import { Suspense, useState } from 'react';
 import { Outlet } from 'react-router';
 import { useMediaQuery } from 'usehooks-ts';
 import { IoMenu } from 'react-icons/io5';
-
+import EmailComponent from '../EmailComponent/EmailComponent';
+import SocialsComponent from '../SocialsComponent/SocialsComponent';
 import Nav from '../Nav/Nav';
 import MobileMenu from '../MobileMenu/MobileMenu';
 import * as S from './SharedLayoud.styled';
@@ -41,6 +42,17 @@ export default function SharedLayout() {
         </Suspense>
       </S.Main>
       <MobileMenu closeHandler={mobilemenuCloseHandler} isOpen={isMobileMenuOpen} />
+
+      {matches ? (
+        <>
+          <S.SocialsBlock>
+            <SocialsComponent />
+          </S.SocialsBlock>
+          <S.EmailBlock>
+            <EmailComponent />
+          </S.EmailBlock>
+        </>
+      ) : null}
     </S.Wrapper>
   );
 }
