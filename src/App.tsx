@@ -1,8 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, lazy } from 'react';
+import { Route, Routes } from 'react-router';
 import { useDebounceCallback, useResizeObserver } from 'usehooks-ts';
+import { ModernNormalize } from 'emotion-modern-normalize';
+import { SharedLayout } from './components';
 
 import * as S from './App.styled';
 import generateParticles from './generateParticles';
+
+const MainPage = lazy(() => import('./pages/MainPage'));
+const ProjectPage = lazy(() => import('./pages/ProjectPage'));
 
 type Size = {
   width?: number;
@@ -39,9 +45,15 @@ export default function App() {
 
   return (
     <S.Wrapper ref={wrapperRef}>
+      <ModernNormalize />
       <S.Canvas ref={canvasRef} />
       <S.Container>
-        <h1>My portfolio</h1>
+        <Routes>
+          <Route element={<SharedLayout />}>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/project" element={<ProjectPage />} />
+          </Route>
+        </Routes>
       </S.Container>
     </S.Wrapper>
   );

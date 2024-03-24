@@ -17,5 +17,6 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/no-absolute-path': 'off',
     'linebreak-style': 'off',
+    'object-curly-newline': 'off',
   },
 };
