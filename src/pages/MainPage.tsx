@@ -21,13 +21,33 @@ export default function MainPage() {
       </section>
       <section>
         <h2>My Skills</h2>
+        <ul>
+          <li> React</li>
+          <li> JavaScript</li>
+          <li> TypeScript</li>
+          <li> HTML</li>
+          <li> CSS</li>
+          <li> SASS</li>
+          <li>Redux Toolkit</li>
+          <li> Next.js</li>
+          <li> Node.js</li>
+          <li>MongoDB</li>
+          <li> Emotion</li>
+          <li>Tailwind CSS</li>
+          <li>Material UI</li>
+          <li>GIT</li>
+        </ul>
       </section>
 
       <section>
         <h2>My Projects</h2>
       </section>
       <section>
-        <h2>Get In Touch</h2>
+        <h2>Get In Touch!</h2>
+        <p>
+          I&apos;m looking for new opportunities and my inbox is always open. Whether you have an
+          idea for a project or just want to diskuss something, feel free to write me!
+        </p>
       </section>
     </>
   );
