@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
     content: '';
     width: 1px;
     height: 100%;
-    background-color: white;
+    background-color: ${({ theme }) => theme.primaryDark};
   }
 `;
 
@@ -32,7 +32,7 @@ export const SocialsListLink = styled.a`
   display: block;
   padding: 8px;
   svg {
-    stroke: white;
+    stroke: ${({ theme }) => theme.primary};
     width: 100%;
     height: 100%;
   }

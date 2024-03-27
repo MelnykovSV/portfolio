@@ -61,7 +61,7 @@ export const Main = styled.main`
 `;
 
 export const ResumeLink = styled(Link)`
-  color: white;
+  color: ${({ theme }) => theme.primary};
   font-size: 22px;
   font-weight: 700;
 `;
@@ -78,7 +78,7 @@ export const MenuButton = styled.button`
   right: 30px;
 
   svg {
-    stroke: white;
+    stroke: ${({ theme }) => theme.primary};
     width: 100%;
     height: 100%;
   }
@@ -88,12 +88,10 @@ export const SocialsBlock = styled.div`
   position: fixed;
   bottom: 0;
   left: 40px;
-  color: white;
 `;
 
 export const EmailBlock = styled.div`
   position: fixed;
   bottom: 0;
   right: 40px;
-  color: white;
 `;

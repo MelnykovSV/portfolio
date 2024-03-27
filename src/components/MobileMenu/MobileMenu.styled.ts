@@ -68,20 +68,20 @@ export const CloseButton = styled.button`
   right: 30px;
 
   svg {
-    fill: white;
+    fill: ${({ theme }) => theme.primary};
     width: 100%;
     height: 100%;
   }
 `;
 
 export const MobileMenuLink = styled(NavLink)`
-  color: white;
+  color: ${({ theme }) => theme.primary};
   font-size: 22px;
   font-weight: 700;
 `;
 
 export const MobileMenuResumeLink = styled(Link)`
-  color: white;
+  color: ${({ theme }) => theme.primary};
   font-size: 22px;
   font-weight: 700;
 `;

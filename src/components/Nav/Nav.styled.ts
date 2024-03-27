@@ -12,7 +12,7 @@ export const NavList = styled.ul`
 `;
 
 export const NavLinkStyled = styled(NavLink)`
-  color: white;
+  color: ${({ theme }) => theme.primary};
   font-size: 22px;
   font-weight: 700;
 `;

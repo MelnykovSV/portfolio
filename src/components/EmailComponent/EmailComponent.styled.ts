@@ -8,13 +8,13 @@ export const Wrapper = styled.div`
   gap: 20px;
   justify-content: space-between;
   a {
-    color: white;
+    color: ${({ theme }) => theme.primary};
   }
   &::after {
     content: '';
     width: 1px;
     height: 100%;
-    background-color: white;
+    background-color: ${({ theme }) => theme.primaryDark};
   }
 `;
 
