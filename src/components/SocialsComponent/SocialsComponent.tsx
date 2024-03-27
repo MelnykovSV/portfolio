@@ -8,7 +8,7 @@ export default function SocialsComponent() {
       <S.SocialsList>
         <li>
           <S.SocialsListLink
-            href="https://www.linkedin.com/in/serhii-v-melnykov/"
+            href="https://github.com/MelnykovSV"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -17,8 +17,8 @@ export default function SocialsComponent() {
         </li>
         <li>
           <S.SocialsListLink
-            href="https://github.com/MelnykovSV"
             target="_blank"
+            href="https://www.linkedin.com/in/serhii-v-melnykov/"
             rel="noopener noreferrer"
           >
             <LuLinkedin />
