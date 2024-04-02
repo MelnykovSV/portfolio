@@ -5,10 +5,10 @@ interface ITechCard {
   icon: string;
 }
 
-export default function TechCard({ text, icon: Icon }: ITechCard) {
+export default function TechCard({ text, icon }: ITechCard) {
   return (
     <S.Wrapper>
-      <Icon width={1000} />
+      <img src={icon} alt={text} width={60} height={60} />
       <p>{text}</p>
     </S.Wrapper>
   );

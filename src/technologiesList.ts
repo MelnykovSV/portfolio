@@ -1,40 +1,40 @@
-import CssIcon from './assets/tech_icons/CSS3.svg?react';
-import ExpressIcon from './assets/tech_icons/express.svg?react';
-import FigmaIcon from './assets/tech_icons/Figma.svg?react';
-import GitIcon from './assets/tech_icons/Git.svg?react';
-import HtmlIcon from './assets/tech_icons/HTML5.svg?react';
-import JsIcon from './assets/tech_icons/Javascript.svg?react';
-import MuiIcon from './assets/tech_icons/Material UI (MUI).svg?react';
-import MongoIcon from './assets/tech_icons/mongodb.svg?react';
-import NextIcon from './assets/tech_icons/Nextjs.svg?react';
-import NodeIcon from './assets/tech_icons/Nodejs.svg?react';
-import PostmanIcon from './assets/tech_icons/Postman.svg?react';
-import ReactIcon from './assets/tech_icons/React.svg?react';
-import ReduxIcon from './assets/tech_icons/Redux.svg?react';
-import SassIcon from './assets/tech_icons/Sass.svg?react';
-import TailwindIcon from './assets/tech_icons/TailwindCSS.svg?react';
-import TsIcon from './assets/tech_icons/TypeScript.svg?react';
-import EmotionIcon from './assets/tech_icons/emotion.svg?react';
+import cssIcon from './assets/tech_icons/CSS3.svg';
+import expressIcon from './assets/tech_icons/express.svg';
+import figmaIcon from './assets/tech_icons/Figma.svg';
+import gitIcon from './assets/tech_icons/Git.svg';
+import htmlIcon from './assets/tech_icons/HTML5.svg';
+import jsIcon from './assets/tech_icons/Javascript.svg';
+import muiIcon from './assets/tech_icons/Material UI (MUI).svg';
+import mongoIcon from './assets/tech_icons/mongodb.svg';
+import nextIcon from './assets/tech_icons/Nextjs.svg';
+import nodeIcon from './assets/tech_icons/Nodejs.svg';
+import postmanIcon from './assets/tech_icons/Postman.svg';
+import reactIcon from './assets/tech_icons/React.svg';
+import reduxIcon from './assets/tech_icons/Redux.svg';
+import sassIcon from './assets/tech_icons/Sass.svg';
+import tailwindIcon from './assets/tech_icons/TailwindCSS.svg';
+import tsIcon from './assets/tech_icons/TypeScript.svg';
+import emotionIcon from './assets/tech_icons/emotion.svg';
 
 const technologiesList: [string, string][] = [
-  ['HTML5', HtmlIcon],
-  ['CSS3', CssIcon],
-  ['SASS', SassIcon],
-  ['JavaScript', JsIcon],
-  ['TypeScript', TsIcon],
-  ['React', ReactIcon],
-  ['Next.js', NextIcon],
-  ['Redux Toolkit', ReduxIcon],
-  ['Material UI', MuiIcon],
+  ['HTML5', htmlIcon],
+  ['CSS3', cssIcon],
+  ['SASS', sassIcon],
+  ['JavaScript', jsIcon],
+  ['TypeScript', tsIcon],
+  ['React', reactIcon],
+  ['Next.js', nextIcon],
+  ['Redux Toolkit', reduxIcon],
+  ['Material UI', muiIcon],
 
-  ['Tailwind CSS', TailwindIcon],
-  ['Node.js', NodeIcon],
+  ['Tailwind CSS', tailwindIcon],
+  ['Node.js', nodeIcon],
 
-  ['MongoDB', MongoIcon],
-  ['Figma', FigmaIcon],
-  ['GIT', GitIcon],
-  ['Postman', PostmanIcon],
-  ['Express.js', ExpressIcon],
-  ['Emotion', EmotionIcon],
+  ['MongoDB', mongoIcon],
+  ['Figma', figmaIcon],
+  ['GIT', gitIcon],
+  ['Postman', postmanIcon],
+  ['Express.js', expressIcon],
+  ['Emotion', emotionIcon],
 ];
 export default technologiesList;
