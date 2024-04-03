@@ -30,33 +30,33 @@ export const Header = styled.header`
   }
 
   @media screen and (min-width: 1440px) {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 `;
 
 export const Main = styled.main`
   width: 100%;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   @media screen and (min-width: 768px) {
     max-width: 768px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   @media screen and (min-width: 1024px) {
     max-width: 1024px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   @media screen and (min-width: 1440px) {
     max-width: 1440px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
   }
 `;
 
@@ -87,7 +87,7 @@ export const MenuButton = styled.button`
 export const SocialsBlock = styled.div`
   position: fixed;
   bottom: 0;
-  left: 40px;
+  left: 20px;
 `;
 
 export const EmailBlock = styled.div`

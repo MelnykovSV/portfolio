@@ -8,8 +8,11 @@ interface ITechCard {
 export default function TechCard({ text, icon }: ITechCard) {
   return (
     <S.Wrapper>
-      <img src={icon} alt={text} width={60} height={60} />
-      <p>{text}</p>
+      <S.ImageThumb>
+        <S.Image src={icon} alt={text} width={60} height={60} />
+      </S.ImageThumb>
+
+      <S.Text>{text}</S.Text>
     </S.Wrapper>
   );
 }
