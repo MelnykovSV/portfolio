@@ -4,5 +4,6 @@ import MobileMenu from './MobileMenu/MobileMenu';
 import EmailComponent from './EmailComponent/EmailComponent';
 import SocialsComponent from './SocialsComponent/SocialsComponent';
 import TechCard from './TechCard/TechCard';
+import Project from './Project/Project';
 
-export { Nav, SharedLayout, MobileMenu, EmailComponent, SocialsComponent, TechCard };
+export { Nav, SharedLayout, MobileMenu, EmailComponent, SocialsComponent, TechCard, Project };
