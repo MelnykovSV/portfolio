@@ -1,7 +1,5 @@
 import portfolio from './assets/crypto/portfolio.jpg';
 
-console.log(portfolio);
-
 const projects = [
   {
     name: 'Crypto',
