@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import * as S from './Project.styled';
 
 interface IProjectProps {
@@ -8,9 +10,17 @@ interface IProjectProps {
 }
 
 export default function Project({ name, description, image, technologies }: IProjectProps) {
+  const [ref, inView] = useInView();
+  const [isShown, setIsShown] = useState(false);
+
+  useEffect(() => {
+    if (!isShown && inView) {
+      setIsShown(true);
+    }
+  }, [inView, isShown]);
   return (
-    <S.Wrapper>
-      <S.InfoBlock>
+    <S.Wrapper ref={ref}>
+      <S.InfoBlock className={isShown ? 'shown' : ''}>
         <h3>{name}</h3>
 
         <div>
@@ -27,7 +37,7 @@ export default function Project({ name, description, image, technologies }: IPro
         </div>
       </S.InfoBlock>
 
-      <S.ImageBlock>
+      <S.ImageBlock className={isShown ? 'shown' : ''}>
         <img src={image} alt={name} width="600" />
       </S.ImageBlock>
     </S.Wrapper>

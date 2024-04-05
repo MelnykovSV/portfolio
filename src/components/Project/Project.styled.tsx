@@ -3,13 +3,43 @@ import styled from '@emotion/styled';
 export const Wrapper = styled.div`
   display: flex;
 
+  & > div:nth-of-type(1) {
+    transition: transform 1s linear;
+
+    transform: translateX(-200%);
+
+    &.shown {
+      transform: translateX(0);
+    }
+  }
+
+  & > div:nth-of-type(2) {
+    transition: transform 1s linear;
+    transform: translateX(200%);
+
+    &.shown {
+      transform: translateX(0);
+    }
+  }
+
   :nth-of-type(2n) {
     flex-direction: row-reverse;
 
     & > div:nth-of-type(1) {
       align-items: end;
+      transform: translateX(200%);
+      &.shown {
+        transform: translateX(0);
+      }
       ul {
         justify-content: end;
+      }
+    }
+
+    & > div:nth-of-type(2) {
+      transform: translateX(-200%);
+      &.shown {
+        transform: translateX(0);
       }
     }
   }

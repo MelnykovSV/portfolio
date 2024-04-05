@@ -18,5 +18,6 @@ module.exports = {
     'import/no-absolute-path': 'off',
     'linebreak-style': 'off',
     'object-curly-newline': 'off',
+    'react/jsx-props-no-spreading': 'off'
   },
 };
