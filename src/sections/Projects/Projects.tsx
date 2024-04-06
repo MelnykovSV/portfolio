@@ -7,15 +7,17 @@ export default function Projects() {
     <S.Wrapper>
       <h2>My Projects</h2>
 
-      {projects.map(({ name, description, technologies, image }) => (
-        <Project
-          name={name}
-          description={description}
-          technologies={technologies}
-          image={image}
-          key={name}
-        />
-      ))}
+      <S.ProjectsList>
+        {projects.map(({ name, description, technologies, image }) => (
+          <Project
+            name={name}
+            description={description}
+            technologies={technologies}
+            image={image}
+            key={name}
+          />
+        ))}
+      </S.ProjectsList>
     </S.Wrapper>
   );
 }

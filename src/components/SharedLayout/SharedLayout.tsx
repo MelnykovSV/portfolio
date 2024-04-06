@@ -21,7 +21,12 @@ export default function SharedLayout() {
         {matches ? (
           <>
             <Nav />
-            <S.ResumeLink to="/resume.pdf" target="_blank" rel="noreferrer noopener">
+            <S.ResumeLink
+              className="visible"
+              to="/resume.pdf"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               Resume
             </S.ResumeLink>
           </>

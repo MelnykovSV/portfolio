@@ -31,6 +31,7 @@ export default function Project({ name, description, image, technologies }: IPro
             ))}
           </S.TechList>
           <S.Links>
+            <S.Link href="#">More info</S.Link>
             <S.Link href="#">Github</S.Link>
             <S.Link href="#">Page</S.Link>
           </S.Links>

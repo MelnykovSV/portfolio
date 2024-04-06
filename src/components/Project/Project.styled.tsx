@@ -1,24 +1,31 @@
 import styled from '@emotion/styled';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.li`
   display: flex;
 
   & > div:nth-of-type(1) {
-    transition: transform 1s linear;
+    transition: transform 1s ease-out, opacity 1s ease-out;
 
     transform: translateX(-200%);
+    opacity: 0;
 
     &.shown {
       transform: translateX(0);
+      opacity: 1;
     }
   }
 
   & > div:nth-of-type(2) {
-    transition: transform 1s linear;
+    transition: transform 1s ease-out, opacity 1s ease-out;
     transform: translateX(200%);
+    opacity: 0;
 
     &.shown {
       transform: translateX(0);
+      opacity: 1;
+    }
+    div {
+      justify-content: start;
     }
   }
 
@@ -30,8 +37,14 @@ export const Wrapper = styled.div`
       transform: translateX(200%);
       &.shown {
         transform: translateX(0);
+        opacity: 1;
+        text-align: end;
       }
       ul {
+        justify-content: end;
+      }
+
+      div {
         justify-content: end;
       }
     }
@@ -40,6 +53,7 @@ export const Wrapper = styled.div`
       transform: translateX(-200%);
       &.shown {
         transform: translateX(0);
+        opacity: 1;
       }
     }
   }
@@ -60,9 +74,17 @@ export const InfoBlock = styled.div`
   display: flex;
   flex-direction: column;
 
+  h3 {
+    color: ${({ theme }) => theme.primary};
+    font-size: 25px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
   & > div {
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgb(17, 34, 64);
     padding: 15px;
+    border-radius: 10px;
     width: 600px;
     position: relative;
     color: white;
@@ -78,7 +100,6 @@ export const TechList = styled.ul`
 
 export const Links = styled.div`
   display: flex;
-  justify-content: end;
 `;
 
 export const Link = styled.a`

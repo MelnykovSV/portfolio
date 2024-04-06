@@ -15,4 +15,12 @@ export const NavLinkStyled = styled(NavLink)`
   color: ${({ theme }) => theme.primary};
   font-size: 22px;
   font-weight: 700;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  opacity: 0;
+  transform: translateY(-50%);
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 `;

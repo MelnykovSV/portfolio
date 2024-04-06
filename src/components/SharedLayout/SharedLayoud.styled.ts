@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   position: relative;
+  overflow-x: hidden;
 `;
 
 export const Container = styled.div``;
@@ -64,6 +65,21 @@ export const ResumeLink = styled(Link)`
   color: ${({ theme }) => theme.primary};
   font-size: 22px;
   font-weight: 700;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.7s; /* Delay of 1 second */
 `;
 
 export const MenuButton = styled.button`
@@ -88,10 +104,38 @@ export const SocialsBlock = styled.div`
   position: fixed;
   bottom: 0;
   left: 20px;
+  z-index: 100;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.7s;
 `;
 
 export const EmailBlock = styled.div`
   position: fixed;
   bottom: 0;
   right: 40px;
+  z-index: 100;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.7s;
 `;

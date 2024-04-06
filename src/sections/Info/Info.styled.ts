@@ -57,6 +57,20 @@ export const Paragraph = styled.p`
 
 export const TitleBlock = styled.div`
   width: 100%;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.9s;
   @media screen and (min-width: 1440px) {
     width: 60%;
   }
@@ -67,6 +81,20 @@ export const InfoBlock = styled.div`
   padding: 15px;
   border-radius: 15px;
   width: 100%;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.9s;
   @media screen and (min-width: 1440px) {
     width: 40%;
     padding: 15px 25px;
