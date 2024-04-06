@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.li`
   color: ${({ theme }) => theme.primary};
 
   border-radius: 10px;
@@ -10,6 +10,14 @@ export const Wrapper = styled.div`
   justify-content: space-evenly;
   align-items: center;
   gap: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  opacity: 0;
+  transform: translateY(50%);
+  &.shown {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   @media screen and (min-width: 1024px) {
     width: calc((100% - 80px) / 5);

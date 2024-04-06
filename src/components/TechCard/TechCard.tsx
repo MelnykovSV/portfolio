@@ -3,14 +3,14 @@ import * as S from './TechCard.styled';
 interface ITechCard {
   text: string;
   icon: string;
-  className: string;
+  isShown: boolean;
 }
 
-export default function TechCard({ text, icon, ...props }: ITechCard) {
+export default function TechCard({ text, icon, isShown }: ITechCard) {
   return (
-    <S.Wrapper>
+    <S.Wrapper className={isShown ? 'shown' : ''}>
       <S.ImageThumb>
-        <S.Image src={icon} alt={text} width={60} height={60} {...props} />
+        <S.Image src={icon} alt={text} width={60} height={60} />
       </S.ImageThumb>
 
       <S.Text>{text}</S.Text>

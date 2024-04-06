@@ -8,7 +8,8 @@ export default function Technologies() {
   const [ref, inView] = useInView();
   const [isShown, setIsShown] = useState(false);
   const [isTimePassed, setIsTimePassed] = useState(false);
-  // const [visibleItems, setVisibleItems] = useState<string[]>([]);
+  const [visibleItems, setVisibleItems] = useState<string[]>([]);
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsTimePassed(true);
@@ -24,32 +25,33 @@ export default function Technologies() {
     }
   }, [inView, isShown]);
 
-  // useEffect(() => {
-  //   if (!isTimePassed) {
-  //     return;
-  //   }
-  //   const interval = setInterval(() => {
-  //     if (visibleItems.length < technologiesList.length) {
-  //       setVisibleItems((prevItems) => [...prevItems, technologiesList[prevItems.length][0]]);
-  //     } else {
-  //       clearInterval(interval);
-  //     }
-  //   }, 200);
+  useEffect(() => {
+    if (isTimePassed && inView) {
+      const interval = setInterval(() => {
+        if (visibleItems.length < technologiesList.length) {
+          setVisibleItems((prevItems) => [...prevItems, technologiesList[prevItems.length][0]]);
+        } else {
+          clearInterval(interval);
+        }
+      }, 50);
 
-  //   return () => clearInterval(interval);
-  // }, [isTimePassed, visibleItems.length]);
+      return () => clearInterval(interval);
+    }
+
+    return undefined;
+  }, [isTimePassed, visibleItems.length, inView]);
   return (
-    <S.Wrapper>
+    <S.Wrapper ref={ref}>
       <S.Title className={isShown && isTimePassed ? 'shown' : ''}>
         Some technologies I&apos;ve worked with:
       </S.Title>
-      <S.TechList ref={ref}>
+      <S.TechList>
         {technologiesList.map((item) => (
           <TechCard
             text={item[0]}
             icon={item[1]}
             key={item[0]}
-            className={isShown && isTimePassed ? 'shown' : ''}
+            isShown={!!(visibleItems.includes(item[0]) && isShown)}
           />
         ))}
       </S.TechList>

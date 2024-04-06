@@ -105,6 +105,7 @@ export const SocialsBlock = styled.div`
   bottom: 0;
   left: 20px;
   z-index: 100;
+  transition: none;
 
   @keyframes fadeIn {
     from {
@@ -125,6 +126,7 @@ export const EmailBlock = styled.div`
   bottom: 0;
   right: 40px;
   z-index: 100;
+  transition: none;
 
   @keyframes fadeIn {
     from {
