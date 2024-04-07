@@ -14,10 +14,11 @@ export default function GetInTouch() {
   return (
     <S.Wrapper ref={ref}>
       <h2 className={isShown ? 'shown' : ''}>Get In Touch!</h2>
-      <p>
+      <S.Paragraph>
         I&apos;m looking for new opportunities and my inbox is always open. Whether you have an idea
         for a project or just want to diskuss something, feel free to write me!
-      </p>
+      </S.Paragraph>
+      <S.EmailLink>Say Hello</S.EmailLink>
     </S.Wrapper>
   );
 }

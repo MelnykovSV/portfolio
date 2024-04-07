@@ -33,6 +33,7 @@ export const MainContainer = styled.div`
 
 export const Main = styled.main`
   overflow-x: hidden;
+  padding-bottom: 100px;
 `;
 
 export const SocialsBlock = styled.div`

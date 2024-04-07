@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 
-export const Wrapper = styled.section``;
+export const Wrapper = styled.section`
+  margin-bottom: 40px;
+`;
 
 export const TechList = styled.ul`
   list-style: none;

@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Wrapper = styled.section`
+  margin-bottom: 40px;
   h2 {
     color: ${({ theme }) => theme.primary};
     opacity: 0;
@@ -19,4 +20,5 @@ export const ProjectsList = styled.ul`
   flex-direction: column;
   gap: 30px;
   padding: 0;
+  margin: 0;
 `;

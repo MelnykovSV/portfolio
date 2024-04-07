@@ -6,6 +6,7 @@ export const Wrapper = styled.section`
   flex-direction: column;
   align-items: start;
   gap: 20px;
+  margin-bottom: 40px;
 
   @media screen and (min-width: 1440px) {
     flex-direction: row;
