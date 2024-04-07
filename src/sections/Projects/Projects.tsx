@@ -7,6 +7,17 @@ import projects from '../../projects';
 export default function Projects() {
   const [ref, inView] = useInView();
   const [isShown, setIsShown] = useState(false);
+  const [isTimePassed, setIsTimePassed] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsTimePassed(true);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
 
   useEffect(() => {
     if (!isShown && inView) {
@@ -15,7 +26,7 @@ export default function Projects() {
   }, [inView, isShown]);
   return (
     <S.Wrapper ref={ref}>
-      <h2 className={isShown ? 'shown' : ''}>My Projects</h2>
+      <h2 className={isShown && isTimePassed ? 'shown' : ''}>My Projects</h2>
 
       <S.ProjectsList>
         {projects.map(({ name, description, technologies, image }) => (
@@ -24,6 +35,7 @@ export default function Projects() {
             description={description}
             technologies={technologies}
             image={image}
+            isTimePassed={isTimePassed}
             key={name}
           />
         ))}

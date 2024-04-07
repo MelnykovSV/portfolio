@@ -21,11 +21,9 @@ export const Title = styled.h2`
   color: ${({ theme }) => theme.primary};
 
   opacity: 0;
-  transform: translateY(-50%);
   transition: transform 0.3s ease, opacity 0.3s ease;
 
   &.shown {
     opacity: 1;
-    transform: translateY(0);
   }
 `;

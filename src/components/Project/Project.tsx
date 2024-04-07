@@ -7,20 +7,27 @@ interface IProjectProps {
   description: string;
   image: string;
   technologies: string[];
+  isTimePassed: boolean;
 }
 
-export default function Project({ name, description, image, technologies }: IProjectProps) {
+export default function Project({
+  name,
+  description,
+  image,
+  technologies,
+  isTimePassed,
+}: IProjectProps) {
   const [ref, inView] = useInView();
   const [isShown, setIsShown] = useState(false);
 
   useEffect(() => {
-    if (!isShown && inView) {
+    if (!isShown && inView && isTimePassed) {
       setIsShown(true);
     }
-  }, [inView, isShown]);
+  }, [inView, isShown, isTimePassed]);
   return (
     <S.Wrapper ref={ref}>
-      <S.InfoBlock className={isShown ? 'shown' : ''}>
+      <S.InfoBlock className={isShown && isTimePassed ? 'shown' : ''}>
         <h3>{name}</h3>
 
         <div>
@@ -38,7 +45,7 @@ export default function Project({ name, description, image, technologies }: IPro
         </div>
       </S.InfoBlock>
 
-      <S.ImageBlock className={isShown ? 'shown' : ''}>
+      <S.ImageBlock className={isShown && isTimePassed ? 'shown' : ''}>
         <img src={image} alt={name} width="600" />
       </S.ImageBlock>
     </S.Wrapper>

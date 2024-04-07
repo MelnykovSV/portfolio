@@ -1,50 +1,39 @@
-import { Suspense, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Outlet } from 'react-router';
+import { useInView } from 'react-intersection-observer';
 import { useMediaQuery } from 'usehooks-ts';
-import { IoMenu } from 'react-icons/io5';
 import EmailComponent from '../EmailComponent/EmailComponent';
 import SocialsComponent from '../SocialsComponent/SocialsComponent';
-import Nav from '../Nav/Nav';
 import MobileMenu from '../MobileMenu/MobileMenu';
 import * as S from './SharedLayoud.styled';
+import Header from '../Header/Header';
 
 export default function SharedLayout() {
   const matches = useMediaQuery('(min-width: 768px)');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    setIsAtTop(inView);
+  }, [inView]);
 
   const mobilemenuCloseHandler = () => {
     setIsMobileMenuOpen(false);
   };
+  const mobilemenuOpenHandler = () => {
+    setIsMobileMenuOpen(true);
+  };
   return (
     <S.Wrapper>
-      <S.Header>
-        {matches ? (
-          <>
-            <Nav />
-            <S.ResumeLink
-              className="visible"
-              to="/resume.pdf"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Resume
-            </S.ResumeLink>
-          </>
-        ) : (
-          <S.MenuButton
-            type="button"
-            onClick={() => {
-              setIsMobileMenuOpen(true);
-            }}
-          >
-            <IoMenu />
-          </S.MenuButton>
-        )}
-      </S.Header>
+      <div ref={ref} />
+      <Header mobilemenuOpenHandler={mobilemenuOpenHandler} matches={matches} isAtTop={isAtTop} />
       <S.Main>
-        <Suspense fallback={<div>LOADING...</div>}>
-          <Outlet />
-        </Suspense>
+        <S.MainContainer>
+          <Suspense fallback={<div>LOADING...</div>}>
+            <Outlet />
+          </Suspense>
+        </S.MainContainer>
       </S.Main>
       <MobileMenu closeHandler={mobilemenuCloseHandler} isOpen={isMobileMenuOpen} />
 
