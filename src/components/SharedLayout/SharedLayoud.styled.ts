@@ -32,48 +32,8 @@ export const MainContainer = styled.div`
 `;
 
 export const Main = styled.main`
-  padding-top: 93px;
   overflow-x: hidden;
 `;
-
-// export const ResumeLink = styled(Link)`
-//   color: ${({ theme }) => theme.primary};
-//   font-size: 22px;
-//   font-weight: 700;
-
-//   @keyframes fadeIn {
-//     from {
-//       opacity: 0;
-//       transform: translateY(-50%);
-//     }
-//     to {
-//       opacity: 1;
-//       transform: translateY(0);
-//     }
-//   }
-
-//   opacity: 0;
-//   animation: fadeIn 0.5s ease forwards;
-//   animation-delay: 0.7s; /* Delay of 1 second */
-// `;
-
-// export const MenuButton = styled.button`
-//   width: 40px;
-//   height: 40px;
-//   border: none;
-//   border-radius: 10px;
-//   background-color: transparent;
-//   padding: 3px;
-//   position: absolute;
-//   top: 30px;
-//   right: 30px;
-
-//   svg {
-//     stroke: ${({ theme }) => theme.primary};
-//     width: 100%;
-//     height: 100%;
-//   }
-// `;
 
 export const SocialsBlock = styled.div`
   position: fixed;
