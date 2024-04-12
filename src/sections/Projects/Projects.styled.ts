@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 
 export const Wrapper = styled.section`
-  margin-bottom: 40px;
+  padding-top: 40px;
+  margin-bottom: 70px;
   h2 {
     color: ${({ theme }) => theme.primary};
     opacity: 0;

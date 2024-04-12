@@ -12,6 +12,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+* {
+  scroll-behavior: smooth;
+}
 
 a {
   font-weight: 500;
@@ -49,7 +52,7 @@ button {
 }
 button:hover {
   border-color: #646cff;
-  
+
 }
 button:focus,
 button:focus-visible {

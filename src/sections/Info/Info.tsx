@@ -2,7 +2,7 @@ import * as S from './Info.styled';
 
 export default function Info() {
   return (
-    <S.Wrapper>
+    <S.Wrapper id="about">
       <S.TitleBlock>
         <h1>Serhii Melnykov</h1>
         <S.Title> Full-stack Web Developer</S.Title>

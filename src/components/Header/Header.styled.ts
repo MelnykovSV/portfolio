@@ -14,7 +14,6 @@ export const Wrapper = styled.header`
   padding-right: 20px;
 
   position: sticky;
-  /* top: 200px; */
 
   top: 0;
 
@@ -42,8 +41,8 @@ export const Wrapper = styled.header`
   &.shrinked {
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: black;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+    background-color: #020438;
+    box-shadow: rgba(113, 47, 255, 0.32) 0px 5px 15px;
   }
 `;
 
@@ -51,6 +50,20 @@ export const ResumeLink = styled(Link)`
   color: ${({ theme }) => theme.primary};
   font-size: 22px;
   font-weight: 700;
+  padding: 10px 20px;
+  border: #fff solid 1px;
+  border-radius: 5px;
+  line-height: 1.1;
+  transition: color 0.3s linear, box-shadow 0.3s linear;
+  box-shadow: none;
+  background-color: rgba(60, 8, 126, 0.42);
+  &:hover {
+    box-shadow: rgba(113, 47, 255, 0.62) 0px 5px 15px;
+
+    background-color: rgba(60, 8, 126, 0.72);
+
+    color: ${({ theme }) => theme.primary};
+  }
 
   @keyframes fadeIn {
     from {

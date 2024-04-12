@@ -25,10 +25,10 @@ export default function SharedLayout() {
     setIsMobileMenuOpen(true);
   };
   return (
-    <S.Wrapper>
+    <S.Wrapper id="top">
       <div ref={ref} />
       <Header mobilemenuOpenHandler={mobilemenuOpenHandler} matches={matches} isAtTop={isAtTop} />
-      <S.Main>
+      <S.Main id="about">
         <S.MainContainer>
           <Suspense fallback={<div>LOADING...</div>}>
             <Outlet />

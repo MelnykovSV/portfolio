@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import * as S from './Nav.styled';
 
 const links = [
-  ['/#about', 'About'],
-  ['/#projects', 'Projects'],
-  ['/#contact', 'Contact'],
+  ['#top', 'About'],
+  ['#projects', 'Projects'],
+  ['#contact', 'Contact'],
 ];
 
 export default function Nav() {
@@ -27,7 +27,7 @@ export default function Nav() {
       <S.NavList>
         {links.map((item) => (
           <S.NavLinkStyled
-            to={item[0]}
+            href={item[0]}
             key={item[0]}
             className={visibleItems.includes(item[0]) ? 'visible' : ''}
           >

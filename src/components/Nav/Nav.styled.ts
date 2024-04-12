@@ -1,17 +1,17 @@
 import styled from '@emotion/styled';
-import { NavLink } from 'react-router-dom';
+// import { Link } from 'react-scroll';
 
 export const Wrap = styled.nav``;
 
 export const NavList = styled.ul`
   display: flex;
-  gap: 20px;
+  gap: 50px;
   list-style: none;
   padding: 0;
   margin: 0;
 `;
 
-export const NavLinkStyled = styled(NavLink)`
+export const NavLinkStyled = styled.a`
   color: ${({ theme }) => theme.primary};
   font-size: 22px;
   font-weight: 700;

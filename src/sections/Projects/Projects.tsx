@@ -25,7 +25,7 @@ export default function Projects() {
     }
   }, [inView, isShown]);
   return (
-    <S.Wrapper ref={ref}>
+    <S.Wrapper ref={ref} id="projects">
       <h2 className={isShown && isTimePassed ? 'shown' : ''}>My Projects</h2>
 
       <S.ProjectsList>

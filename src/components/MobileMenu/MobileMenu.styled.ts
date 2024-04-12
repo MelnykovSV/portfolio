@@ -26,7 +26,8 @@ export const Wrapper = styled.div`
   transform: translateX(0);
   transition: transform 0.3s linear;
   z-index: 110;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: #020438;
+  box-shadow: rgba(113, 47, 255, 0.32) 0px 5px 15px;
   display: flex;
   flex-direction: column;
 
@@ -51,7 +52,7 @@ export const MobileMenuList = styled.ul`
   align-items: center;
   gap: 20px;
 
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 `;
 
 export const MobileMenuListItem = styled.li``;
@@ -84,4 +85,20 @@ export const MobileMenuResumeLink = styled(Link)`
   color: ${({ theme }) => theme.primary};
   font-size: 22px;
   font-weight: 700;
+
+  padding: 10px 20px;
+  border: #fff solid 1px;
+  border-radius: 5px;
+  line-height: 1.1;
+  transition: color 0.3s linear, box-shadow 0.3s linear;
+  box-shadow: none;
+
+  background-color: rgba(60, 8, 126, 0.42);
+  &:hover {
+    box-shadow: rgba(113, 47, 255, 0.62) 0px 10px 25px;
+
+    background-color: rgba(60, 8, 126, 0.72);
+
+    color: ${({ theme }) => theme.primary};
+  }
 `;

@@ -82,7 +82,8 @@ export const InfoBlock = styled.div`
   }
 
   & > div {
-    background-color: rgb(17, 34, 64);
+    /* background-color: rgb(17, 34, 64); */
+    background-color: #020438;
     padding: 15px;
     border-radius: 10px;
     width: 600px;
