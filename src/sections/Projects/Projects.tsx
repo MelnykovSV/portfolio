@@ -29,7 +29,7 @@ export default function Projects() {
       <h2 className={isShown && isTimePassed ? 'shown' : ''}>My Projects</h2>
 
       <S.ProjectsList>
-        {projects.map(({ name, description, technologies, image }) => (
+        {projects.map(({ name, description, technologies, image, links }) => (
           <Project
             name={name}
             description={description}
@@ -37,6 +37,7 @@ export default function Projects() {
             image={image}
             isTimePassed={isTimePassed}
             key={name}
+            links={links}
           />
         ))}
       </S.ProjectsList>

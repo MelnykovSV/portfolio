@@ -8,6 +8,12 @@ interface IProjectProps {
   image: string;
   technologies: string[];
   isTimePassed: boolean;
+  links: {
+    github: string;
+    githubBack?: string;
+    moreInfo?: string;
+    livePage: string;
+  };
 }
 
 export default function Project({
@@ -16,6 +22,7 @@ export default function Project({
   image,
   technologies,
   isTimePassed,
+  links: { github, githubBack, moreInfo, livePage },
 }: IProjectProps) {
   const [ref, inView] = useInView();
   const [isShown, setIsShown] = useState(false);
@@ -26,28 +33,32 @@ export default function Project({
     }
   }, [inView, isShown, isTimePassed]);
   return (
-    <S.Wrapper ref={ref}>
-      <S.InfoBlock className={isShown && isTimePassed ? 'shown' : ''}>
-        <h3>{name}</h3>
+    <S.Wrapper className={isShown && isTimePassed ? 'shown' : ''}>
+      <h3>{name}</h3>
+      <S.ProjectBody ref={ref}>
+        <S.InfoBlock className={isShown && isTimePassed ? 'shown' : ''}>
+          <h3>{name}</h3>
 
-        <div>
-          <p>{description}</p>
-          <S.TechList>
-            {technologies.map((item) => (
-              <p key={item}>{item}</p>
-            ))}
-          </S.TechList>
-          <S.Links>
-            <S.Link href="#">More info</S.Link>
-            <S.Link href="#">Github</S.Link>
-            <S.Link href="#">Page</S.Link>
-          </S.Links>
-        </div>
-      </S.InfoBlock>
+          <div>
+            <p>{description}</p>
+            <S.TechList>
+              {technologies.map((item) => (
+                <p key={item}>{item}</p>
+              ))}
+            </S.TechList>
+            <S.Links>
+              {moreInfo && <S.Link href={moreInfo}>More info</S.Link>}
+              <S.Link href={github}>Github</S.Link>
+              {githubBack && <S.Link href={githubBack}>Github(backend)</S.Link>}
+              <S.Link href={livePage}>Page</S.Link>
+            </S.Links>
+          </div>
+        </S.InfoBlock>
 
-      <S.ImageBlock className={isShown && isTimePassed ? 'shown' : ''}>
-        <img src={image} alt={name} width="600" />
-      </S.ImageBlock>
+        <S.ImageBlock className={isShown && isTimePassed ? 'shown' : ''}>
+          <img src={image} alt={name} width="600" />
+        </S.ImageBlock>
+      </S.ProjectBody>
     </S.Wrapper>
   );
 }

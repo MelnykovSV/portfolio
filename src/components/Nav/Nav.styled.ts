@@ -19,6 +19,17 @@ export const NavLinkStyled = styled.a`
 
   opacity: 0;
   transform: translateY(-50%);
+
+  transition: text-shadow 0.3s linear;
+  box-shadow: none;
+
+  /* background-color: rgba(60, 8, 126, 0.42); */
+  &:hover {
+    text-shadow: ${({ theme }) => theme.primary} 1px 0 20px;
+
+    color: ${({ theme }) => theme.primary};
+  }
+
   &.visible {
     opacity: 1;
     transform: translateY(0);

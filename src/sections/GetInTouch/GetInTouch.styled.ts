@@ -4,6 +4,7 @@ export const Wrapper = styled.section`
   /* background-color: white; */
   h2 {
     color: ${({ theme }) => theme.primary};
+    font-size: 30px;
 
     text-align: center;
     margin: 0;

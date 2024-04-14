@@ -19,6 +19,7 @@ export const TechList = styled.ul`
 
 export const Title = styled.h2`
   color: ${({ theme }) => theme.primary};
+  font-size: 30px;
 
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
