@@ -66,7 +66,7 @@ export default function Project({
                 </S.Link>
               )}
               <S.Link href={livePage} target="_blank" rel="noopener noreferrer">
-                Page
+                Live page
               </S.Link>
             </S.Links>
           </div>
@@ -74,7 +74,7 @@ export default function Project({
 
         <S.ImageBlock className={isShown && isTimePassed ? 'shown' : ''}>
           <picture>
-            <source srcSet={`${image.webp} 1x, ${image.webp2x} 2x`} type="image/jpeg" />
+            <source srcSet={`${image.webp} 1x, ${image.webp2x} 2x`} type="image/webp" />
             <source srcSet={`${image.jpg} 1x, ${image.jpg} 2x`} type="image/jpeg" />
             <img src={image.jpg} alt={name} width={780} />
           </picture>

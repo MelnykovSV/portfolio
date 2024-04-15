@@ -50,6 +50,9 @@ export default function Technologies() {
           <TechCard
             text={item[0]}
             icon={item[1]}
+            icon2x={item[1]}
+            iconWebp={item[1]}
+            icon2xWeb={item[1]}
             key={item[0]}
             isShown={!!(visibleItems.includes(item[0]) && isShown)}
           />

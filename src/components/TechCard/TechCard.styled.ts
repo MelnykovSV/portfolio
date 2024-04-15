@@ -33,6 +33,8 @@ export const Container = styled.div``;
 export const ImageThumb = styled.div`
   width: 30px;
   height: 30px;
+  display: flex;
+  justify-content: center;
 
   @media screen and (min-width: 1024px) {
     width: 45px;
@@ -43,6 +45,7 @@ export const ImageThumb = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: 100%;
+  object-fit: contain;
 `;
 
 export const Text = styled.p`
