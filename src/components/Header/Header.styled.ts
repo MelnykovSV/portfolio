@@ -43,6 +43,7 @@ export const Wrapper = styled.header`
     padding-bottom: 10px;
     background-color: #020438;
     box-shadow: rgba(113, 47, 255, 0.32) 0px 5px 15px;
+    height: 66px;
   }
 `;
 
@@ -89,7 +90,7 @@ export const MenuButton = styled.button`
   background-color: transparent;
   padding: 3px;
   position: absolute;
-  top: 30px;
+  top: 15px;
   right: 30px;
 
   svg {

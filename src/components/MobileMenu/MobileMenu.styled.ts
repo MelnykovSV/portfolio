@@ -65,7 +65,7 @@ export const CloseButton = styled.button`
   background-color: transparent;
   padding: 3px;
   position: absolute;
-  top: 30px;
+  top: 15px;
   right: 30px;
 
   svg {
