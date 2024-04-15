@@ -129,6 +129,7 @@ export const ProjectBody = styled.div`
 
 export const ImageBlock = styled.div`
   width: 100%;
+  aspect-ratio: 790 / 420;
 
   overflow: hidden;
 
@@ -137,6 +138,8 @@ export const ImageBlock = styled.div`
 
   @media screen and (min-width: 1024px) {
     width: 60%;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
   }
   @media screen and (min-width: 1440px) {
     width: 60%;
@@ -145,6 +148,7 @@ export const ImageBlock = styled.div`
   img {
     width: 100%;
     display: block;
+    object-fit: contain;
   }
   position: relative;
   z-index: 10;
@@ -211,12 +215,13 @@ export const InfoBlock = styled.div`
 export const TechList = styled.ul`
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   padding: 0;
   margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   p {
-    margin-top: 20px;
-    margin-bottom: 20px;
     padding: 5px;
     border-radius: 10px;
 
