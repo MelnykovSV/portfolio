@@ -32,7 +32,7 @@ const projects = [
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MongoDB', 'Material UI', 'Emotion'],
     links: {
       github: 'https://github.com/MelnykovSV/crypto',
-      // moreInfo: '#',
+      // moreInfo: '',
       livePage: 'https://crypto-seven-lemon.vercel.app/',
     },
   },
@@ -59,7 +59,7 @@ const projects = [
     links: {
       github: 'https://github.com/MelnykovSV/eln-app-frontend',
       githubBack: 'https://github.com/MelnykovSV/eln-app-web-server',
-      // moreInfo: '#',
+      // moreInfo: '',
       livePage: 'https://eln-app-frontend.vercel.app/',
     },
   },
@@ -86,7 +86,7 @@ const projects = [
     links: {
       github: 'https://github.com/MelnykovSV/GooseTrack',
       githubBack: 'https://github.com/MelnykovSV/GooseTrack-backend',
-      // moreInfo: '#',
+      // moreInfo: '',
       livePage: 'https://melnykovsv.github.io/GooseTrack/',
     },
   },
@@ -103,7 +103,7 @@ const projects = [
     technologies: ['JavaScript', 'HTML', 'SCSS'],
     links: {
       github: 'https://github.com/MelnykovSV/js-project-books-t5',
-      // moreInfo: '#',
+      // moreInfo: '',
       livePage: 'https://melnykovsv.github.io/js-project-books-t5/',
     },
   },

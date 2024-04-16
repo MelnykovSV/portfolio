@@ -3,13 +3,13 @@ import bgImage from './assets/space.jpg';
 
 export const Wrapper = styled.div`
   background-image: url(${bgImage}), linear-gradient(to right, #0a192f, #0a192f);
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 100vw;
   height: 100vh;
   position: relative;
-
 `;
 
 export const Canvas = styled.canvas`

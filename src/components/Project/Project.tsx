@@ -13,6 +13,7 @@ interface IProjectProps {
   };
   technologies: string[];
   isTimePassed: boolean;
+
   links: {
     github: string;
     githubBack?: string;
@@ -29,7 +30,7 @@ export default function Project({
   isTimePassed,
   links: { github, githubBack, moreInfo, livePage },
 }: IProjectProps) {
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ triggerOnce: true });
   const [isShown, setIsShown] = useState(false);
 
   useEffect(() => {

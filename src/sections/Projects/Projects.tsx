@@ -5,7 +5,7 @@ import { Project } from '../../components';
 import projects from '../../projects';
 
 export default function Projects() {
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ triggerOnce: true });
   const [isShown, setIsShown] = useState(false);
   const [isTimePassed, setIsTimePassed] = useState(false);
 
