@@ -22,7 +22,7 @@ const projects = [
   {
     name: 'Crypto',
     description:
-      'This application provides a platform for users to practice cryptocurrency trading with simulated funds. It offers various features to enhance your trading experience, including a comprehensive coin table, detailed single-coin information, dynamic cryptoPreview page with charts and trading capabilities, transaction history table, and a user information page.',
+      'This application provides a platform for users to practice cryptocurrency trading with simulated funds. It offers various features to enhance your trading experience, including a comprehensive coin table, detailed single-coin information, dynamic portfolio page with charts and trading capabilities, transaction history table, and a user information page.',
     image: {
       jpg: cryptoPreview,
       jpg2x: cryptoPreview2x,
@@ -39,7 +39,7 @@ const projects = [
   {
     name: 'Electronic laboratory Notebook',
     description:
-      'Сhemical syntheses management application (frontend and backend). Notable features include the ability to save experiment spectra in PDF format, identification of the last successfully completed stage for the progress tracking, automated calculation of reagent quantities needed for the entire synthesis or a single experiment, and yield calculation.',
+      'Сhemical syntheses management application. Notable features include the ability to save experiment spectra in PDF format, identification of the last successfully completed stage for the progress tracking, automated calculation of reagent quantities needed for the entire synthesis or a single experiment, and yield calculation.',
     image: {
       jpg: elnPreview,
       jpg2x: elnPreview2x,

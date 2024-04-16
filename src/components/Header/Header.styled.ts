@@ -5,8 +5,8 @@ export const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   width: 100%;
   margin: 0 auto;
@@ -20,8 +20,9 @@ export const Wrapper = styled.header`
   background-color: transparent;
   z-index: 100;
   box-shadow: none;
+  height: 106px;
 
-  transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
 
   @media screen and (min-width: 768px) {
     padding-left: 30px;
@@ -39,8 +40,6 @@ export const Wrapper = styled.header`
   }
 
   &.shrinked {
-    padding-top: 10px;
-    padding-bottom: 10px;
     background-color: #020438;
     box-shadow: rgba(113, 47, 255, 0.32) 0px 5px 15px;
     height: 66px;

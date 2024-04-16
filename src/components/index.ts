@@ -6,6 +6,7 @@ import SocialsComponent from './SocialsComponent/SocialsComponent';
 import TechCard from './TechCard/TechCard';
 import Project from './Project/Project';
 import Header from './Header/Header';
+import Loader from './Loader/Loader';
 
 export {
   Nav,
@@ -16,4 +17,5 @@ export {
   TechCard,
   Project,
   Header,
+  Loader,
 };

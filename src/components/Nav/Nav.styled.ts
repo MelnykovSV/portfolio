@@ -15,12 +15,11 @@ export const NavLinkStyled = styled.a`
   color: ${({ theme }) => theme.primary};
   font-size: 22px;
   font-weight: 700;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 1s ease, text-shadow 0.3s linear;
 
   opacity: 0;
   transform: translateY(-50%);
 
-  transition: text-shadow 0.3s linear;
   box-shadow: none;
 
   /* background-color: rgba(60, 8, 126, 0.42); */

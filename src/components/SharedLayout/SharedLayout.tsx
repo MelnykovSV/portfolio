@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Outlet } from 'react-router';
 import { useInView } from 'react-intersection-observer';
 import { useMediaQuery } from 'usehooks-ts';
@@ -30,9 +30,7 @@ export default function SharedLayout() {
       <Header mobilemenuOpenHandler={mobilemenuOpenHandler} matches={matches} isAtTop={isAtTop} />
       <S.Main id="about">
         <S.MainContainer>
-          <Suspense fallback={<div>LOADING...</div>}>
-            <Outlet />
-          </Suspense>
+          <Outlet />
         </S.MainContainer>
       </S.Main>
       <MobileMenu closeHandler={mobilemenuCloseHandler} isOpen={isMobileMenuOpen} />
