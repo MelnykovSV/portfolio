@@ -63,7 +63,7 @@ export default function Project({
               </S.Link>
               {githubBack && (
                 <S.Link href={githubBack} target="_blank" rel="noopener noreferrer">
-                  Github(backend)
+                  Github (backend)
                 </S.Link>
               )}
               <S.Link href={livePage} target="_blank" rel="noopener noreferrer">

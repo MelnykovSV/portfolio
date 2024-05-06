@@ -95,7 +95,7 @@ const projects = [
     ],
   },
   {
-    name: 'Electronic laboratory Notebook',
+    name: 'Electronic Laboratory Notebook',
     path: 'ELN',
     description:
       'Сhemical syntheses management application. Notable features include the ability to save experiment spectra in PDF format, identification of the last successfully completed stage for the progress tracking, automated calculation of reagent quantities needed for the entire synthesis or a single experiment, and yield calculation.',

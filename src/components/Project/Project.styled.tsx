@@ -238,7 +238,7 @@ export const Link = styled.a`
   display: block;
   padding: 5px 10px;
   border: 1px solid #fff;
-  border-radius: 10px;
+  border-radius: 4px;
   color: #fff;
   transition: color 0.3s linear, box-shadow 0.3s linear;
   box-shadow: none;
