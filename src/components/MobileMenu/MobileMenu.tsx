@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import { useMediaQuery } from 'usehooks-ts';
 import { IoCloseSharp } from 'react-icons/io5';
 import * as S from './MobileMenu.styled';
+import { links } from '../../constants';
 
 interface IMobileMenuProps {
   closeHandler: () => void;
@@ -48,21 +49,13 @@ export default function MobileMenu({ closeHandler, isOpen }: IMobileMenuProps) {
         </S.CloseButton>
 
         <S.MobileMenuList>
-          <S.MobileMenuListItem>
-            <S.MobileMenuLink to="/#about" onClick={closeHandler}>
-              About
-            </S.MobileMenuLink>
-          </S.MobileMenuListItem>
-          <S.MobileMenuListItem>
-            <S.MobileMenuLink to="/#projects" onClick={closeHandler}>
-              Projects
-            </S.MobileMenuLink>
-          </S.MobileMenuListItem>
-          <S.MobileMenuListItem>
-            <S.MobileMenuLink to="/#contact" onClick={closeHandler}>
-              Contact
-            </S.MobileMenuLink>
-          </S.MobileMenuListItem>
+          {links.map((item) => (
+            <S.MobileMenuListItem key={item[0]}>
+              <S.MobileMenuLink href={item[0]} onClick={closeHandler}>
+                {item[1]}
+              </S.MobileMenuLink>
+            </S.MobileMenuListItem>
+          ))}
         </S.MobileMenuList>
 
         <S.MobileMenuResumeLink

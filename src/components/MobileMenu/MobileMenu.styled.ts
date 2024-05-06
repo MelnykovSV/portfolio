@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const Backdrop = styled.div`
   position: fixed;
@@ -75,10 +75,17 @@ export const CloseButton = styled.button`
   }
 `;
 
-export const MobileMenuLink = styled(NavLink)`
+export const MobileMenuLink = styled.a`
   color: ${({ theme }) => theme.primary};
   font-size: 22px;
   font-weight: 700;
+  transition: text-shadow 0.3s linear;
+
+  &:hover {
+    text-shadow: ${({ theme }) => theme.primary} 1px 0 20px;
+
+    color: ${({ theme }) => theme.primary};
+  }
 `;
 
 export const MobileMenuResumeLink = styled(Link)`

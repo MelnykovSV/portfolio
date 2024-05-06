@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-// import { Link } from 'react-scroll';
 
 export const Wrap = styled.nav``;
 
@@ -22,7 +21,6 @@ export const NavLinkStyled = styled.a`
 
   box-shadow: none;
 
-  /* background-color: rgba(60, 8, 126, 0.42); */
   &:hover {
     text-shadow: ${({ theme }) => theme.primary} 1px 0 20px;
 
